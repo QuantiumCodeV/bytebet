@@ -136,9 +136,11 @@ $(document).ready(function () {
     if ($(".sidebar").hasClass("active")) {
       $(".sidebar").removeClass("active");
       $(".openBrowse").removeClass("active");
+      $("body").css("overflow", "visible");
     } else {
       $(".sidebar").addClass("active");
       $(".openBrowse").addClass("active");
+      $("body").css("overflow", "hidden");
     }
   });
 
