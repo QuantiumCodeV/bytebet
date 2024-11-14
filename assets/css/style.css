@@ -1,0 +1,3151 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Righteous&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: "Manrope", sans-serif;
+    --second-family: "Righteous", sans-serif;
+    --third-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #0a131f;
+    cursor: default;
+    font-family: var(--font-family);
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+   /* width: calc(100% - 200px);*/
+    height: 100%;
+    min-height: calc(100vh - 55px);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    background: #0c1927;
+    border-bottom: 1px solid #1e2b3c;
+    position: relative;
+}
+
+.header_brend {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header_menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.header_menu span {
+    width: 24px;
+    height: 2px;
+    background: #667f9d;
+}
+
+.header_logo, .header_logo img {
+    width: 107px;
+    height: 24px;
+}
+
+.header_nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.header_nav_link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #eef6ff;
+}
+
+.header_other {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.header_auth_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header_btn_login {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #eef6ff;
+    border-radius: 6px;
+    padding: 8px 16px 10px 16px;
+    background: #2c3d53;
+    cursor: pointer;
+    transition: background 0.35s ease-in;
+}
+
+.header_btn_reg {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #eef6ff;
+    border-radius: 6px;
+    padding: 8px 14px 10px 14px;
+    background: #027ef1;
+    cursor: pointer;
+    transition: background 0.35s ease-in;
+}
+
+.header_chat svg path {
+    transition: fill 0.35s ease-in;
+}
+
+.header_chat:hover svg path {
+    fill: #3E526C;
+}
+
+.header_btn_login:hover, .blackjack_action_game_btn:hover {
+    background: #3E526C;
+}
+
+.header_btn_reg:hover, .blackjack_game_bet:hover {
+    background: #379FFF;
+}
+
+.header_chat {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 0px 20px;
+    border-right: 1px solid #1e2b3c;
+    background: #0c1927;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: width 0.35s ease-in;
+}
+
+.sidebar_items {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 22px;
+    border-bottom: 1px solid #1e2b3c;
+}
+
+.sidebar_item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar_item_icon, .sidebar_item_icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar_item_name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #eef6ff;
+    text-wrap: nowrap;
+    transition: opacity 0.35s ease-in, visibility 0.35s ease-in;
+    visibility: visible;
+}
+
+.main_content {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.index_wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 860px;
+    margin: 60px auto;
+}
+
+.start_wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 60px;
+}
+
+.start_title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 130%;
+    color: #eef6ff;
+    margin-bottom: 40px;
+}
+
+.start_btn {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #eef6ff;
+    border-radius: 6px;
+    padding: 12px 18px 14px 18px;
+    background: #027ef1;
+    cursor: pointer;
+    transition: background 0.35s ease-in;
+    width: min-content;
+    text-wrap: nowrap;
+}
+
+.start_btn:hover {
+    background: #379FFF;
+}
+
+.start_desc {
+    width: 185px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 130%;
+    color: #667f9d;
+    margin-top: 30px;
+}
+
+.thousands_section {
+    position: relative;
+    margin-top: 80px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    background: #0c1927;
+}
+
+.thousands_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    color: #eef6ff;
+    margin-bottom: 40px;
+}
+
+.hidePC {
+    display: none!important;
+}
+
+.hideMobile {
+    display: flex!important;
+}
+
+.thousands_items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.thousands_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 10px 14px;
+    background: #2c3d53;
+}
+
+.thousands_item.active {
+    background: #e21452;
+}
+
+.thousands_item_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.thousands_item_name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #eef6ff;
+}
+
+.thousands_img, .thousands_img img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.global_section {
+    display: flex;
+    gap: 70px;
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+    border-bottom: 1px solid #1e2b3c;
+}
+
+.global_title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    color: #eef6ff;
+}
+
+.global_desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #667f9d;
+    margin-top: 20px;
+}
+
+.global_icon, .global_icon img {
+    width: 409px;
+    height: 213px;
+}
+
+.lock_icon, .lock_icon img {
+    width: 344px;
+    height: 274px;
+}
+
+.player_section {
+    margin-top: 80px;
+}
+
+.player_head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.player_head_title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    text-align: center;
+    color: #eef6ff;
+}
+
+.player_head_desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: #667f9d;
+}
+
+.player_items_wrapper {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    margin-top: 50px;
+}
+
+.player_items_vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.player_item_vertical {
+    width: 100%;
+    min-width: 425px;
+    height: 225px;
+    border-radius: 10px;
+    background: #0c1927;
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.player_item_vertical_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    color: #eef6ff;
+    margin-bottom: 10px;
+}
+
+.player_item_vertical_desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #667f9d;
+    max-width: 230px;
+}
+
+.promotions_img {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+}
+
+.rocket_img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.player_item_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.player_item_horiz {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    background: #0c1927;
+}
+
+.player_item_horiz_img, .player_item_horiz_img img {
+    width: 326px;
+    height: 274px;
+    margin: 0 auto;
+}
+
+.player_item_horiz_text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.player_item_horiz_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    color: #eef6ff;
+}
+
+.player_item_horiz_desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #667f9d;
+}
+
+.player_item_full {
+    position: relative;
+    width: 100%;
+    margin-top: 12px;
+    padding: 30px;
+    border-radius: 10px;
+    background: #0c1927;
+}
+
+.player_item_days {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.player_item_day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    background: #2c3d53;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: #667f9d;
+}
+
+.player_item_day.active {
+    border: 2px solid #ffa5c0;
+    background: #e21452;
+}
+
+.player_item_day.disabled {
+    background: #102030;
+}
+
+.player_bottom_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.player_bottom_head {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    color: #eef6ff;
+}
+
+.player_bottom_desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #667f9d;
+}
+
+.player_icon_gift, .player_icon_gift img {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.rewards_section {
+    display: flex;
+    align-items: center;
+    gap: 125px;
+    margin-top: 80px;
+}
+
+.rewards_section_body {
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+}
+
+.rewards_section_title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    color: #eef6ff;
+}
+
+.rewards_section_desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #667f9d;
+    margin-top: 20px;
+}
+
+.rewards_btn {
+    border-radius: 6px;
+    padding: 12px 18px 14px 18px;
+    background: #eef6ff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #09131f;
+    margin-top: 40px;
+    width: min-content;
+    text-wrap: nowrap;
+    border: 1px solid #FFF;
+    transition: background 0.35s ease-in, color 0.35s ease-in;
+    cursor: pointer;
+}
+
+.rewards_btn:hover {
+    color: #FFF;
+    border: 1px solid #FFF;
+    background: transparent;
+}
+
+.rewards_section_items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.rewards_section_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 14px;
+    background: #102030;
+}
+
+.rewards_section_item_icon {
+    width: 24px;
+    height: 24px;
+}
+
+.rewards_section_item_name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #eef6ff;
+}
+
+.community_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    background: #0c1927;
+    margin-top: 80px;
+    position: relative;
+}
+
+.community_section_head {
+    width: 100%;
+    max-width: 390px;
+}
+
+.community_section_title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    color: #eef6ff;
+}
+
+.community_section_desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #667f9d;
+    margin-top: 20px;
+}
+
+.community_section_join {
+    border-radius: 6px;
+    padding: 12px 18px 14px 18px;
+    background: #027ef1;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #eef6ff;
+    transition: background 0.35s ease-in;
+}
+
+.community_section_join:hover {
+    background: #379FFF;
+}
+
+.community_section_icon, .community_section_icon img {
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+}
+
+.footer_wrapper {
+    border-top: 1px solid #1e2b3c;
+    background: #0a131f;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    border-bottom: 1px solid #1e2b3c;
+}
+
+.footer_section_brend {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+    border-right: 1px solid #1e2b3c;
+    height: 100%;
+}
+
+.footer_section_brend_desc {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #667f9d;
+    margin-top: 10px;
+}
+
+.footer_section_brend_warning {
+    width: 100%;
+    max-width: 205px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    color: #eef6ff;
+    margin-top: 30px;
+}
+
+.footer_section_brend_socials {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 30px;
+}
+
+.footer_section_brend_social_item {
+    border-radius: 6px;
+    background: #2c3d53;
+    width: 32px;
+    height: 32px;
+}
+
+.footer_section_nav {
+    display: flex;
+    gap: 70px;
+    margin-left: 50px;
+}
+
+.footer_section_nav_item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer_section_nav_item_title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    color: #eef6ff;
+}
+
+.footer_section_nav_item_link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #667f9d;
+    transition: color 0.35s ease-in;
+}
+
+.footer_section_nav_item_link:hover {
+    color: #FFF;
+}
+
+.footer_section_nav_item_select {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.footer_section_nav_item_select_name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #eef6ff;
+}
+
+.footer_other {
+    height: 34px;
+}
+
+.pages_wrapper {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    min-height: calc(100vh - 450px);
+    padding: 10px;
+}
+
+.casino_news {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.casino_news_item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 6px;
+    width: 100%;
+    background: #0c1927;
+}
+
+.casino_news_item_title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    color: #eef6ff;
+}
+
+.casino_news_item_desc {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 130%;
+    color: #667f9d;
+    margin-top: 10px;
+    max-width: 200px;
+}
+
+.casino_news_item_link {
+    border-radius: 6px;
+    padding: 8px 16px 10px 16px;
+    background: #2c3d53;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #eef6ff;
+    width: min-content;
+    text-wrap: nowrap;
+    margin-top: 50px;
+    transition: background 0.35s ease-in;
+}
+
+.casino_news_item_link:hover {
+    background: #3E526C;
+}
+
+.casino_search_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+    background: #0c1927;
+    height: 38px;
+    border-radius: 6px;
+    padding: 0 10px;
+    border: 1px solid #2c3d53;
+}
+
+.casino_search_wrapper_icon {
+    width: 16px;
+    height: 16px;
+}
+
+.casino_search_input_wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.casino_search_input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #eef6ff;
+}
+
+.casino_search_input::placeholder {
+    color: #667f9d;
+}
+
+.casino_search_input::placeholder {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #667f9d;
+}
+
+.casino_category {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+    border-bottom: 1px solid #2c3d53;
+    overflow-x: auto;
+}
+
+.casino_category_item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 8px;
+    cursor: pointer;
+}
+
+.casino_category_item_icon {
+    width: 16px;
+    height: 16px;
+    transition: all 0.35s ease-in;
+}
+
+.casino_category_item_icon svg path {
+    fill: #667F9D;
+}
+
+.casino_category_item_name {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #eef6ff;
+    transition: all 0.35s ease-in;
+}
+
+.casino_category_item.active {
+    border-bottom: 2px solid #e21452;
+}
+
+.casino_category_item.active .casino_category_item_icon svg path {
+    fill: #E21452;
+}
+
+.casino_row_games {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.casino_row_games_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.casino_row_games_head_title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.casino_row_games_head_name {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    color: #eef6ff;
+}
+
+.casino_row_games_head_icon, .casino_row_games_head_icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.casino_row_games_pagination {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.casino_row_games_pagination_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: #2c3d53;
+    cursor: pointer;
+    transition: background 0.35s ease-in;
+}
+
+.casino_row_games_pagination_item:hover {
+    background: #3E526C;
+}
+
+.casino_row_games_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 8px 0px 8px 5px;
+}
+
+.casino_row_games_item {
+    border-radius: 6px;
+    width: 185px;
+    height: 220px;
+    background: #0c1927;
+    flex-shrink: 0;
+    transition: transform 0.35s ease-in;
+}
+
+.casino_row_games_item:hover .casino_row_games_item_icon {
+    transform: scale(1.05);
+    border-radius: 6px;
+    border: 1px solid #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.60);
+
+}
+
+.casino_row_games_item_icon {
+    width: 100%;
+    height: 100%;
+    transition: all 0.35s ease-in;
+}
+
+.casino_row_games_item_providers {
+    border-radius: 6px;
+    width: 185px;
+    height: 90px;
+    background: #0c1927;
+    flex-shrink: 0;
+}
+
+.casino_bets_history, .blackjack_history {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.casino_bets_history_head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #2c3d53;
+}
+
+.casino_bets_history_head_item, .blackjack_bets_history_head_item {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #eef6ff;
+    padding: 17px 8px;
+    cursor: pointer;
+    text-align: center  ;
+}
+
+.casino_bets_history_head_item.active, .blackjack_bets_history_head_item.active {
+    border-bottom: 2px solid #e21452;
+}
+
+.casino_bets_history_body, .blackjack_bets_history_body {
+    position: relative;
+    width: 100%;
+}
+
+.text-right {
+    text-align: right!important;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.casino_bet_table {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.casino_bet_table th {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #667f9d;
+    padding: 15px;
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.casino_bet_table_tbody td {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #eef6ff;
+    padding: 15px;
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table_flex {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.table_flex.justify-end {
+    justify-content: flex-end;
+}
+
+.casino_bet_table_tbody tr {
+    border-radius: 6px;
+    background: #0c1927;
+}
+
+.blackjack_wrapper {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 6px;
+    background: #0C1927;
+    padding: 8px;
+}
+
+.blackjack_bet_wrapper {
+    flex-shrink: 0;
+    width: 300px;
+    padding: 30px;
+}
+
+.blackjack_bet_head {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blackjack_bet_head_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blackjack_bet_head_name {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.blackjack_bet_head_balance {
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+    color: #667F9D;
+}
+
+.blackjack_bet_input_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+    padding: 0 10px;
+    height: 38px;
+}
+
+.sidebar_search {
+    display: none;
+}
+
+.blackjack_bet_input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: #667F9D;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    outline: none;
+    border: none;
+}
+
+.blackjack_bet_input_actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blackjack_bet_input_action_line {
+    height: 14px;
+    width: 1px;
+    background: #1E2B3C;
+}
+
+.blackjack_bet_input_action {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; 
+    cursor: pointer;
+}
+
+.blackjack_action_game {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.blackjack_action_game_double {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blackjack_action_game_btn {
+    display: flex;
+    width: 100%;
+    padding: 12px 16px 14px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    background: #2C3D53;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    cursor: pointer;
+    transition: background 0.35s ease-in;
+}
+
+.blackjack_game_bet {
+    display: flex;
+    width: 100%;
+    padding: 14px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    background: #027EF1;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    cursor: pointer;
+    transition: background 0.35s ease-in;
+}
+
+.blackjack_game_footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 70px;
+    padding-top: 15px;
+    border-top: 1px solid #1E2B3C;
+}
+
+.blackjack_game_footer_action {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.blackjack_field_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    border-radius: 6px;
+    background: #102030;
+    position: relative;
+}
+
+.blackjack_field_dealer, .blackjack_field_player{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.blackjack_card {
+    width: 92px;
+    height: 116px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    margin-left: -55px;
+}
+
+.blackjack_highlight {
+    border: 3px solid #12BB4A;
+}
+
+.blackjack_card img {
+    width: 100%;
+    height: 100%;
+}
+
+.blackjack_card:nth-child(2) {
+    transform: translateY(10px);
+}
+
+.blackjack_card:nth-child(3) {
+    transform: translateY(20px);
+}
+
+.blackjack_score {
+    position: absolute;
+    left: 50%;
+    border-radius: 6px;
+    background: #2C3D53;
+    display: inline-flex;
+    padding: 6px 14px;
+    justify-content: center;
+    align-items: center;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.blackjack_score.win {
+    background: #12BB4A;
+}
+
+.blackjack_field_dealer:last-child {
+    position: relative;
+}
+
+.blackjack_deck {
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+
+.blackjack_history {
+    border-radius: 6px;
+    background: #0C1927;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.blackjack_bet_table_tbody tr {
+    border-radius: 6px;
+    background: #102030;
+}
+
+.blackjack_bet_table_tbody td {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #eef6ff;
+    padding: 15px;
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.blackjack_history_head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.blackjack_history_head_title {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.blackjack_history_head_desc {
+    color: #667F9D;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; 
+}
+
+.blackjack_challenges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 60px 0;
+}
+
+.blackjack_challenges_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.blackjack_challenges_status {
+    color: #667F9D;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.blackjack_description {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.game_description_wrapper {
+    width: 100%;
+    max-width: 540px;
+}
+
+.game_description_head {
+    width: 100%;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #1E2B3C;
+}
+
+.game_description_head_keys {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.game_description_head_key {
+    display: flex;
+    padding: 8px 12px 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    background: #2C3D53;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.game_description_head_key.active {
+    color: #09131F;
+    background: #EEF6FF;
+}
+
+.game_description_head_desc {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; 
+    margin-top: 20px;
+}
+
+.game_description_faq_title {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 14px; 
+    margin-top: 40px;
+}
+
+.game_description_faq_text {
+    color: #667F9D;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    margin-bottom: 30px;
+}
+
+.game_description_rules {
+    margin-top: 30px;
+}
+
+
+.game_description_rules_title {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.game_description_rules_block {
+    color: #667F9D;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    margin-top: 15px;
+}
+
+.chat_wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    border-left: 1px solid #1E2B3C;
+    background: #09131F;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.35s ease-in;
+    z-index: 999;
+}
+
+.chat_wrapper.open {
+    width: 340px;
+}
+
+.chat_wrapper.close {
+    width: 0px;
+}
+
+.chat_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    background: #102030;
+    max-height: 55px;
+}
+
+.chat_head_title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chat_head_title_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.chat_head_title_name {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.chat_head_close {
+    display: flex;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.chat_main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 14px;
+    overflow-y: auto;
+}
+
+.chat_message {
+    position: relative;
+    width: 100%;
+    padding: 14px 9px 9px 16px;
+    border-radius: 8px;
+    background: #102030;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.chat_message_content {
+    width: 100%;
+    max-width: 260px;
+}
+
+.chat_message_name {
+    color: #667F9D;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; 
+}
+
+.chat_message_time {
+    position: absolute;
+    right: 9px;
+    bottom: 9px;
+    color: #667F9D;
+    font-family: Manrope;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.chat_message_send_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    background: #0C1927;
+    z-index: 999;
+}
+
+.chat_message_send_input_wrapper {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0px 16px;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+}
+
+.chat_message_send_input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.chat_message_send_input::placeholder {
+    color: #667F9D;
+}
+
+.chat_message_send_emoji {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.chat_message_send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 38px;
+    border-radius: 6px;
+    background: #027EF1;
+    cursor: pointer;
+}
+
+.profile_pages_head {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.profile_pages_head_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.profile_pages_head_name {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.settings_wrapper {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.settings_nav_menu {
+    width: 100%;
+    height: 100%;
+    max-width: 210px;
+    border-radius: 6px;
+    background: #0C1927;
+    padding: 10px;
+}
+
+.settings_nav_item {
+    padding: 12px 14px;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.35s ease-in;
+    margin-top: 5px;
+}
+
+.casino_wrapper_type {
+    display: none;
+}
+
+.casino_wrapper_type.active {
+    display: block;
+}
+
+.settings_nav_item:hover {
+    background: #2C3D53;
+}
+
+.settings_nav_item.active {
+    background: #2C3D53;
+}
+
+.settings_content {
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background: #0C1927;
+}
+
+.setting_general {
+    width: 100%;
+    max-width: 390px;
+    display: none;
+}
+
+.setting_general.active {
+    display: block;
+}
+
+.setting_general_head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.setting_general_head_name {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.setting_general_head_status {
+    color: #09131F;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    padding: 5px 8px 7px 8px;
+    border-radius: 6px;
+    background: #12BB4A;
+}
+
+.setting_general_input_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.setting_general_input_label {
+    color: #6F85A0;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.setting_general_input {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    padding: 12px 10px 14px 10px;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+}
+
+.setting_general_select {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.setting_general_line {
+    width: 100%;
+    height: 1px;
+    background: #203346;
+    margin: 30px 0;
+}
+
+.setting_general_head_desc {
+    color: #6F85A0;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin-top: 8px;
+}
+
+.setting_general_action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.setting_general_action_btn {
+    display: inline-flex;
+    padding: 14px 30px;
+    justify-content: center;
+    align-items: center;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    border-radius: 6px;
+    background: #2C3D53;
+}
+
+.setting_general_action_btn.colorful {
+    background: #027EF1;
+}
+
+.header_wallet_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header_wallet_balance {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px 0px 0px 6px;
+    background: #2C3D53;
+}
+
+.header_wallet_balance_icon {
+    width: 18px;
+    height: 18px;
+}
+
+.header_wallet_balance_num {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; 
+}
+
+.header_wallet_btn {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0px 6px 6px 0px;
+    background: #027EF1;
+    cursor: pointer;
+}
+
+.header_auth_icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 30px;
+}
+
+.header_auth_icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.header_profile_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 65px;
+    right: 50px;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+    padding: 20px;
+    min-width: 180px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header_profile_nav_item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header_profile_nav_item_icon {
+    width: 18px;
+    height: 18px;
+}
+
+.header_profile_nav_item_name {
+    color: #6F85A0;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.header_profile_nav_item.active .header_profile_nav_item_name{
+    color: #EEF6FF;
+}
+
+.modal_background.active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.60);
+    z-index: 1000;
+}
+
+.modal_background {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.60);
+    z-index: 1000;
+}
+
+.modal {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 410px;
+    margin: 0 auto;
+    border-radius: 6px;
+    background: #0C1927;
+    padding: 24px;
+    z-index: 1001;
+}
+
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal_head_name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal_head_name_icon {
+    width: 22px;
+    height: 22px;
+}
+
+.modal_head_name_value {
+    color: #EEF6FF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.modal_close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+
+.modal_content {
+    margin-top: 30px;
+}
+
+.modal_wallet_balance {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #203346;
+}
+
+.modal_wallet_balance_name {
+    color: #6F85A0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+
+.modal_wallet_balance_value {
+    color: #EEF6FF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.modal_wallet_monet {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.modal_wallet_monet_item.active {
+    background: #2C3D53;
+}
+
+.modal_wallet_monet_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.35s ease-in;
+}
+
+.modal_wallet_monet_item:hover {
+    background: #2C3D53;
+}
+
+.modal_wallet_monet_item_left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal_wallet_monet_item_icon {
+    width: 36px;
+    height: 36px;
+}
+
+.modal_wallet_monet_item_names {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal_wallet_monet_item_shortname, .modal_wallet_monet_item_value_crypto {
+    color: #EEF6FF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.modal_wallet_monet_item_fullname, .modal_wallet_monet_item_value_usd {
+    color: #6F85A0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.modal_wallet_monet_item_values {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal_wallet_actions {
+    margin-top: 30px;
+}
+
+.modal_wallet_actions_top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.modal_wallet_action_modal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 14px 26px 14px 30px;
+    justify-content: center;
+    color: #EEF6FF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    border-radius: 6px;
+    background: #027EF1;
+    transition: background 0.35s ease-in;
+}
+
+.modal_wallet_action_modal:hover {
+    background: #379FFF;
+}
+
+.modal_wallet_action_link {
+    display: flex;
+    padding: 14px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    background: #2C3D53;
+    margin-top: 10px;
+    color: #EEF6FF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.modal_auth_input_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.modal_auth_input_label {
+    color: #6F85A0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+
+.modal_auth_input {
+    color: #EEF6FF;
+    font-family: var(--font-family);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+    padding: 10px;
+}
+
+.modal_auth_input::placeholder {
+    color: #6F85A0;
+}
+
+.modal_auth_actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal_auth_action {
+    display: flex;
+    width: 100%;
+    padding: 14px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #EEF6FF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; 
+    border-radius: 6px;
+    background: #2C3D53;
+    cursor: pointer;
+    transition: background 0.35s ease-in;
+}
+
+.modal_auth_action.colorful {
+    background: #027EF1;
+}
+
+.modal_auth_action.colorful:hover {
+    background: #379FFF;
+}
+
+.modal_auth_action:hover {
+    background: #3E526C;
+}
+
+.modal_auth_or_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.modal_auth_or_line {
+    width: 100%;
+    height: 1px;
+    background: #203346;
+}
+
+.modal_auth_or_name {
+    color: #6F85A0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.start_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile_menu {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    padding: 16px 33px;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #203346;
+    background: #0C1927;
+    z-index: 1000000;
+    display: none;
+}
+
+.mobile_menu_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.mobile_menu_item.active .mobile_menu_item_name, .mobile_menu_item.active .mobile_menu_item_icon svg path{
+    color: #EEF6FF;
+    fill: #EEF6FF;
+}
+
+.mobile_menu_item_name {
+    color: #6F85A0;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; 
+}
+
+.mobile_menu_item_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.header_notify {
+    position: relative;
+}
+
+.header_notifications_wrapper {
+    position: fixed;
+    width: 370px;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+    z-index: 998;
+    padding: 16px;
+    top: 65px;
+    right: 50px;
+}
+
+.header_notifications_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.header_notifications_header_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header_notifications_header_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.header_notifications_header_name {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; 
+}
+
+.header_notifications_header_close {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+
+.header_notifications_header_other {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.header_notifications_header_other_text {
+    color: #6F85A0;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+
+.header_notifications_header_other_checkmark {
+    color: #EEF6FF;
+    text-align: right;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    cursor: pointer;
+}
+
+.header_notifications_card_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.header_notifications_card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    border-radius: 6px;
+    background: #102030;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.header_notifications_card_status {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+}
+
+.header_notifications_card_icon svg circle {
+    transition: fill 0.35s ease-in;
+}
+
+.header_notifications_card:hover .header_notifications_card_icon svg circle {
+    fill: #027EF1;
+}
+
+.header_notifications_card_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header_notifications_card_title {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.header_notifications_card_desc {
+    color: #6F85A0;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; 
+}
+
+.header_notifications_card_date {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #6F85A0;
+    text-align: right;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+
+.header_notify_wrapper {
+    display: none;
+    position: fixed;
+    width: 180px;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+    z-index: 998;
+    padding: 20px;
+    top: 65px;
+    right: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.header_notify_item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header_notify_item_icon {
+    width: 18px;
+    height: 18px;
+    transition: all 0.35s ease-in;
+}
+
+.header_notify_item_icon svg path {
+    transition: all 0.35s ease-in;
+}
+
+.header_notify_item_name {
+    color: #6F85A0;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    transition: all 0.35s ease-in;
+}
+
+.header_notify_item:hover .header_notify_item_icon svg path {
+    fill: #EEF6FF;
+}
+
+.header_notify_item:hover .header_notify_item_name {
+    color: #EEF6FF;
+}
+
+.blackjack_game_footer_settings_wrapper {
+    position: absolute;
+    top: 45px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 20px;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+    z-index: 99999;
+}
+
+.blackjack_game_footer_settings_item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.blackjack_game_footer_settings_item_icon {
+    width: 18px;
+    height: 18px;
+}
+
+.blackjack_game_footer_settings_item_input_wrapper {
+    display: flex;
+}
+
+.blackjack_game_footer_settings_item_name {
+    color: #6F85A0;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.blackjack_livestats_wrapper {
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+    width: 275px;
+    max-width: 275px;
+    z-index: 99999;
+}
+
+.blackjack_livestats_wrapper_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blackjack_livestats_wrapper_header_title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blackjack_livestats_wrapper_header_title_icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.blackjack_livestats_wrapper_header_title_name {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.blackjack_livestats_settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.blackjack_livestats_settings_period_input {
+    padding: 10px 5px 10px 10px;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    outline: none;
+}
+
+.blackjack_livestats_settings_reload {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.blackjack_livestats_block {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    background: #102030;
+    margin-top: 15px;
+}
+
+.blackjack_livestats_block_item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blackjack_livestats_block_item_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blackjack_livestats_header_close {
+    cursor: pointer;
+}
+
+.blackjack_livestats_block_item_name {
+    color: #6F85A0;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.blackjack_livestats_block_item_value {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.blackjack_livestats_block_item_value.success {
+    color: #12BB4A;
+}
+
+.blackjack_livestats_block_item_value.lose {
+    color: #E21452;
+}
+
+.blackjack_livestats_block_line {
+    background: #203346;
+    width: 1px;
+    height: 98px;
+}
+
+.blackjack_livestats_block_item_block {
+    width: 96px;
+    height: 17px;
+    border-radius: 4px;
+    background: #6F85A0;
+}
+
+.setting_general_input_inner {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    height: 45px;
+    padding: 0px 10px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #2C3D53;
+    background: #0C1927;
+}
+
+.setting_general_input_prefix {
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; 
+}
+
+.setting_general_input_tra {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: #EEF6FF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; 
+}
+
+.setting_general_input_tra::placeholder {
+    color: #6F85A0;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.start_img_container {
+    position: relative;
+    width: 384px;
+    height: 270px;
+    overflow: visible;
+}
+
+.start_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: radial-gradient(72.22% 72.22% at 50% 100%, #00539F 0%, #0C1927 100%);
+}
+
+.start_img img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.table_value.rank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    width: 20px;
+    height: 20px;
+    background: #E21452;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 60px!important;
+    }
+    .pages_wrapper {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header_menu, .header_nav, .header_chat, .player_item_day.disabled, .rewards_section, .nomobile {
+        display: none;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .sidebar {
+        overflow: scroll;
+        position: relative;
+        width: 0px!important;
+        padding: 0;
+        border-right: none;
+        top: 55px;
+    }
+
+    .sidebar.active {
+        position: fixed;
+        top: 55px;
+        z-index: 99999;
+        height: calc(100% - 132px);
+        width: 100% !important;
+        border-right: 1px solid #1e2b3c;
+    }
+
+    .sidebar_item {
+        padding: 0px 20px;
+    }
+
+    .index_wrapper {
+        margin: 20px auto;
+    }
+
+    .start_wrapper, .global_section, .player_items_wrapper, .community_section, .footer_content, .blackjack_wrapper, .game_block_blackjack {
+        flex-direction: column;
+    }
+
+    .start_left {
+        order: 1;
+        width: 100%;
+    }
+
+    .footer_other {
+        margin-top: 50px;
+    }
+
+    .start_title {
+        font-size: 28px;
+    }
+
+    .start_flex {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .start_desc {
+        margin-top: 0;
+    }
+
+    .thousands_title {
+        font-size: 20px;
+    }
+
+    .thousands_section {
+        height: 440px;
+        margin-top: 50px;
+        overflow: hidden;
+    }
+
+    .global_icon, .global_icon img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: -5px;
+    }
+
+    .global_icon {
+        order: -1;
+    }
+
+    .global_section {
+        gap: 35px;
+    }
+
+    .player_items_vertical, .player_items_wrapper {
+        gap: 20px;
+    }
+
+    .global_other {
+        padding-bottom: 50px;
+    }
+
+    .global_icon {
+        border-bottom: 1px solid #1e2b3c;
+    }
+
+    .player_head_title {
+        font-size: 24px;
+    }
+
+    .player_item_vertical {
+        min-width: 100%;
+    }
+
+    .player_item_full {
+        height: 355px;
+    }
+
+    .player_item_full {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .player_bottom_text {
+        order: -1;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+
+    .player_icon_gift img {
+        width: 189px;
+        height: 168px;
+    }
+    
+    .global_other {
+        order: -1;
+    }
+
+    .community_section_join {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .community_section {
+        height: 355px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .community_section_icon img {
+        right: -100px;
+    }
+
+    .footer_section_brend {
+        border-right: 0;
+        padding-bottom: 50px;
+        padding-right: 0;
+        border-bottom: 1px solid #1e2b3c;
+        gap: 40px;
+    }
+
+    .footer_section_nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 0;
+        margin-top: 50px;
+        gap: 40px;
+    }
+
+    .casino_news, .casino_category, .casino_bet_table, .blackjack_history {
+        overflow-x: auto;
+    }
+
+    .casino_news_item {
+        flex-shrink: 0;
+    }
+
+    .casino_category_item_name {
+        text-wrap: nowrap;
+    }
+
+    .blackjack_wrapper {
+        padding: 0;
+    }
+
+    .blackjack_bet_wrapper {
+        order: 1;
+        width: 100%;
+    }
+
+    .blackjack_field_wrapper {
+        height: 350px;
+    }
+
+    .footer_section_brend {
+        gap: 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hidePC {
+        display: flex!important;
+    }
+
+    .hideMobile {
+        display: none!important;
+    }
+
+    .game_description {
+        width: 185px;
+        margin: 0 auto;
+    }
+
+    .sidebar_search {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .game_description_head_keys {
+        flex-wrap: wrap;
+    }
+
+    .game_description_head {
+        padding-bottom: 40px;
+    }
+
+    .header_auth_icons {
+        margin-left: 0;
+    }
+
+    .chat_wrapper.open {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .chat_wrapper, .modal_background.active {
+        z-index: 1000001;
+    }
+
+    .modal {
+        z-index: 1000002;
+    }
+
+    .modal {
+        max-width: 100%;
+    }
+
+    .mobile_menu {
+        display: flex;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 99999;
+    }
+
+    .main_content {
+        padding: 100px 15px 15px 15px;
+    }
+
+    .header_notify_wrapper.active {
+        width: 100%;
+        height: 100%;
+        top: 58px;
+        left: 0;
+        border: none;
+        gap: 0;
+    }
+
+    .header_notify_wrapper {
+        width: 100%;
+        height: 100%;
+        top: 58px;
+        left: 0;
+        border: none;
+        gap: 0;
+    }
+
+    .header_notifications_wrapper.active {
+        width: 100%;
+        height: 100%;
+        top: 58px;
+        left: 0;
+        border: none;
+        gap: 0;
+    }
+
+    .header_notifications_wrapper {
+        width: 100%;
+        height: 100%;
+        top: 58px;
+        left: 0;
+        border: none;
+        gap: 0;
+    }
+
+    .header_notify_item {
+        width: 100%;
+        padding: 20px 0px;
+        border-bottom: 1px solid rgba(32, 51, 70, 1);
+    }
+
+    .modal_background.active {
+        background: none;
+    }
+
+    .modal {
+        position: fixed;
+        height: calc(100% - 132px);
+        top: 55px;
+    }
+    
+    .settings_nav_menu {
+        background: none;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .settings_nav_item.active {
+        background: none;
+    }
+
+    .settings_nav_item {
+        padding: 20px 0px;
+        border-bottom: 1px solid #203346;
+        border-radius: 0;
+    }
+
+    .settings_content {
+        display: none;
+    }
+}
+
+.blackjack_field_bg {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+    .modal_background.active {
+        background: none;
+    }
+
+    .modal {
+        position: fixed;
+        height: calc(100% - 132px);
+        top: 55px;
+    }
+    
+    .settings_nav_menu {
+        background: none;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .settings_nav_item.active {
+        background: none;
+    }
+
+    .settings_nav_item {
+        padding: 20px 0px;
+        border-bottom: 1px solid #203346;
+        border-radius: 0;
+    }
+
+    .settings_content {
+        display: none;
+    }
+}
