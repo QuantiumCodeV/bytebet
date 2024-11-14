@@ -2960,7 +2960,14 @@ input {
     .casino_category_item_name {
         text-wrap: nowrap;
     }
-
+    .chat_main{
+        padding-bottom: 85px;
+    }
+    .chat_message_send_wrapper{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
     .blackjack_wrapper {
         padding: 0;
     }
