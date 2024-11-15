@@ -68,9 +68,11 @@ $(document).ready(function () {
   // Handle chat close button
   $(".chat_head_close").click(function () {
     if ($(".chat_wrapper").hasClass("open")) {
+      $(".open_chat").removeClass("active");
       $(".chat_wrapper").removeClass("open").addClass("close");
       $("body").css("overflow", "visible");
     } else {
+      $(".open_chat").addClass("active");
       $(".chat_wrapper").removeClass("close").addClass("open");
       if ($(window).width() < 1001) {
         $("body").css("overflow", "hidden");
