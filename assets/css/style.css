@@ -195,11 +195,11 @@ input {
 }
 
 
-.sidebar_item div svg path {
+.sidebar_item .sidebar_item_icon svg path {
   transition: fill 0.35s ease-in;
 }
 
-.sidebar_item:hover div svg path {
+.sidebar_item:hover .sidebar_item_icon svg path {
   fill: white;
 }
 
@@ -3075,7 +3075,9 @@ input {
     width: 100%;
     max-width: 100%;
   }
-
+  .chat_wrapper{
+    top: 55px;
+  }
   .chat_wrapper,
   .modal_background.active {
     z-index: 1000001;
