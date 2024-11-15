@@ -127,7 +127,7 @@ $(document).ready(function () {
   });
 
   // Handle registration modal open
-  $(".openModalReg").click(function () {
+  $(".openModalReg, .start_btn").click(function () {
     $(".modal").fadeOut(350);
     $(".modal_background").fadeIn(350);
     $(".modal_register").fadeIn(350);
