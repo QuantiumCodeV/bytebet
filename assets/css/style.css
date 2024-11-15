@@ -1089,7 +1089,6 @@ input {
 .blackjack_bets_history_body {
   position: relative;
   width: 100%;
-  overflow-x: scroll;
 }
 
 .text-right {
@@ -2850,6 +2849,11 @@ input {
     padding: 0;
     border-right: none;
     top: 55px;
+  }
+
+  .casino_bets_history_body,
+  .blackjack_bets_history_body {
+    overflow-x: scroll;
   }
 
   .sidebar.active {
