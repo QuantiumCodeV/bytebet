@@ -134,6 +134,21 @@ $(document).ready(function () {
     $("body").css("overflow", "hidden");
   });
 
+
+
+
+// Handle soglash modal open
+$(".openModalSogl").click(function () {
+  $(".modal").fadeOut(350);
+  $(".modal_background").fadeIn(350);
+  $(".modal_sogl").fadeIn(350);
+  $("body").css("overflow", "hidden");
+});
+
+
+
+
+
   // Handle modal close
   $(".modal_close").click(function () {
     $(".modal_background").fadeOut(350);

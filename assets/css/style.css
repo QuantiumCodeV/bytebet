@@ -194,6 +194,15 @@ input {
     background: rgba(44, 61, 83, 1);
 }
 
+
+.sidebar_item div svg path {
+  transition: fill 0.35s ease-in;
+}
+
+.sidebar_item:hover div svg path {
+  fill: white;
+}
+
 .sidebar_item_icon,
 .sidebar_item_icon svg {
   width: 20px;
@@ -3202,3 +3211,108 @@ input {
     display: none;
   }
 }
+
+
+
+
+.modal_sogl_main {
+  width: 100%;
+  height: auto;
+}
+
+.modal_sogl_main_terms{
+  max-height: 270px;
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 6px;
+  background: #102030;
+}
+.modal_sogl_main_terms_content{
+  padding: 16px;
+
+}
+.modal_sogl_main_tittle {
+  color: #EEF6FF;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 14px */
+}
+.modal_sogl_main_blocks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.modal_sogl_main_block {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.modal_sogl_main_block:last-child{
+  margin-bottom: 0px;
+}
+.modal_sogl_main_block_tittle {
+  color: #EEF6FF;
+font-family: "Manrope", sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 16px */
+}
+.modal_sogl_main_block_text {
+  margin-top: 12px;
+  color: #6F85A0;
+font-family: "Manrope", sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 19.6px */
+}
+.modal_sogl_main_buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.modal_sogl_main_button {
+  color: #EEF6FF;
+  font-family: "Manrope", sans-serif;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 6px;
+background: #2C3D53;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 14px */
+  border-radius: 6px;
+cursor: pointer;
+transition: all .5s;
+outline: none;
+border: none;
+}
+
+.modal_sogl_main_button:hover{
+  opacity: .5;
+}
+
+.modal_sogl_main_button:first-child{
+  background: #027EF1;
+  margin-bottom: 8px;
+}
+
+
+.modal_sogl_main_terms {
+  overflow-y: auto;
+  scrollbar-width: none; /* for Firefox */
+  -ms-overflow-style: none; /* for Internet Explorer and Edge */
+}
+
+.modal_sogl_main_terms::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+

@@ -19,6 +19,7 @@
     <title>ByteBet</title>
   </head>
   <body>
+    <div class="modal_background"></div>
     <div class="wrapper">
       <div class="header">
         <div class="header_brend">
@@ -39,8 +40,8 @@
         </div>
         <div class="header_other">
           <div class="header_auth_wrapper">
-            <button type="button" class="header_btn_login">Login</button>
-            <button type="button" class="header_btn_reg">Registration</button>
+            <button type="button" class="header_btn_login openModalLogin">Login</button>
+            <button type="button" class="header_btn_reg openModalReg">Registration</button>
           </div>
           <div class="header_chat open_chat">
             <svg
@@ -1941,6 +1942,182 @@
               </defs>
             </svg>
           </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal_register" style="display: none">
+      <div class="modal_head">
+        <div class="modal_head_name">
+          <div class="modal_head_name_value">Create an account</div>
+        </div>
+        <div class="modal_close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+          >
+            <path
+              d="M10.8002 1.19995L6.00019 5.99995M6.00019 5.99995L1.2002 10.8M6.00019 5.99995L1.2002 1.19995M6.00019 5.99995L10.8002 10.8"
+              stroke="#EEF6FF"
+              stroke-width="2"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="modal_content">
+        <div class="modal_auth_input_wrapper">
+          <label class="modal_auth_input_label">Account Email</label>
+          <input
+            type="text"
+            class="modal_auth_input"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="modal_auth_input_wrapper">
+          <label class="modal_auth_input_label">Username</label>
+          <input
+            type="text"
+            class="modal_auth_input"
+            placeholder="Enter your username"
+          />
+        </div>
+        <div class="modal_auth_input_wrapper">
+          <label class="modal_auth_input_label">Password</label>
+          <input
+            type="text"
+            class="modal_auth_input"
+            placeholder="Create password"
+          />
+        </div>
+        <div class="modal_auth_input_wrapper">
+          <label class="modal_auth_input_label">Phone (Optional)</label>
+          <input
+            type="text"
+            class="modal_auth_input"
+            placeholder="Phone number"
+          />
+        </div>
+        <div class="modal_auth_actions">
+          <button class="modal_auth_action colorful openModalSogl">Continue</button>
+          <div class="modal_auth_or_wrapper">
+            <div class="modal_auth_or_line"></div>
+            <div class="modal_auth_or_name">OR</div>
+            <div class="modal_auth_or_line"></div>
+          </div>
+          <button class="modal_auth_action openModalLogin">Sign In</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal_login" style="display: none">
+      <div class="modal_head">
+        <div class="modal_head_name">
+          <div class="modal_head_name_value">Sign In</div>
+        </div>
+        <div class="modal_close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+          >
+            <path
+              d="M10.8002 1.19995L6.00019 5.99995M6.00019 5.99995L1.2002 10.8M6.00019 5.99995L1.2002 1.19995M6.00019 5.99995L10.8002 10.8"
+              stroke="#EEF6FF"
+              stroke-width="2"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="modal_content">
+        <div class="modal_auth_input_wrapper">
+          <label class="modal_auth_input_label">Email or Username</label>
+          <input
+            type="text"
+            class="modal_auth_input"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="modal_auth_input_wrapper">
+          <label class="modal_auth_input_label">Password</label>
+          <input
+            type="text"
+            class="modal_auth_input"
+            placeholder="Create password"
+          />
+        </div>
+        <div class="modal_auth_actions">
+          <button class="modal_auth_action colorful">SIgn In</button>
+          <div class="modal_auth_or_wrapper">
+            <div class="modal_auth_or_line"></div>
+            <div class="modal_auth_or_name">OR</div>
+            <div class="modal_auth_or_line"></div>
+          </div>
+          <button class="modal_auth_action openModalReg">
+            Register Account
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal_sogl" style="display: none;">
+      <div class="modal_head">
+        <div class="modal_head_name">
+          <div class="modal_head_name_value">Create an account</div>
+        </div>
+        <div class="modal_close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+          >
+            <path
+              d="M10.8002 1.19995L6.00019 5.99995M6.00019 5.99995L1.2002 10.8M6.00019 5.99995L1.2002 1.19995M6.00019 5.99995L10.8002 10.8"
+              stroke="#EEF6FF"
+              stroke-width="2"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="modal_content">
+    
+        <div class="modal_sogl_main">
+          <div class="modal_sogl_main_content">
+            <div class="modal_sogl_main_terms">
+              <div class="modal_sogl_main_terms_content">
+                <p class="modal_sogl_main_tittle">Terms and Conditions</p>
+                <div class="modal_sogl_main_blocks">
+                  <div class="modal_sogl_main_block">
+                    <p class="modal_sogl_main_block_tittle">1. BYTEBET.COM</p>
+                    <p class="modal_sogl_main_block_text">Blackjack is one of the most popular online casino games available at ByteBet.com. The goal of Blackjack is to acquire a hand as close to 21 as possible, beating the dealer in the process. Beating the dealer with a regular hand pays out 1:1, while beating the dealer with Blackjack pays out 3:2.
+                      As the leading online casino, we have many popular Blackjack variants, with this ByteBet original version of Blackjack being amongst our best games !</p>
+                  </div>
+                  <div class="modal_sogl_main_block">
+                    <p class="modal_sogl_main_block_tittle">1. BYTEBET.COM</p>
+                    <p class="modal_sogl_main_block_text">Blackjack is one of the most popular online casino games available at ByteBet.com. The goal of Blackjack is to acquire a hand as close to 21 as possible, beating the dealer in the process. Beating the dealer with a regular hand pays out 1:1, while beating the dealer with Blackjack pays out 3:2.
+                      As the leading online casino, we have many popular Blackjack variants, with this ByteBet original version of Blackjack being amongst our best games !</p>
+                  </div>
+                  <div class="modal_sogl_main_block">
+                    <p class="modal_sogl_main_block_tittle">1. BYTEBET.COM</p>
+                    <p class="modal_sogl_main_block_text">Blackjack is one of the most popular online casino games available at ByteBet.com. The goal of Blackjack is to acquire a hand as close to 21 as possible, beating the dealer in the process. Beating the dealer with a regular hand pays out 1:1, while beating the dealer with Blackjack pays out 3:2.
+                      As the leading online casino, we have many popular Blackjack variants, with this ByteBet original version of Blackjack being amongst our best games !</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal_sogl_main_buttons">
+              <button class="modal_sogl_main_button">Play Now</button>
+              <button class="modal_sogl_main_button openModalReg">Back</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
