@@ -1,18 +1,21 @@
 $(document).ready(function () {
+  // Track sidebar open/closed state
   let isSidebarOpen = true;
 
+  // Handle sidebar toggle on menu click
   $(".header_menu").click(function () {
     if (isSidebarOpen) {
       $(".sidebar").css("width", "60px");
       $(".sidebar_item_name").css("opacity", "0");
     } else {
-      $(".sidebar").css("width", "200px");
+      $(".sidebar").css("width", "200px"); 
       $(".sidebar_item_name").css("opacity", "1");
     }
 
     isSidebarOpen = !isSidebarOpen;
   });
 
+  // Handle game type selection
   $(".game_select_type").click(function () {
     $(".game_select_type").removeClass("active");
     $(this).addClass("active");
@@ -21,6 +24,7 @@ $(document).ready(function () {
     $('.game_block_blackjack[data-type="' + selectedType + '"]').show();
   });
 
+  // Handle casino category selection
   $(".casino_category_item").click(function () {
     $(".casino_category_item").removeClass("active");
     $(this).addClass("active");
@@ -29,6 +33,7 @@ $(document).ready(function () {
     $('.casino_wrapper_type[data-type="' + selectedType + '"]').show();
   });
 
+  // Handle settings navigation
   $(".settings_nav_item").click(function () {
     if ($(window).width() < 480) {
       $(".settings_nav_menu").hide();
@@ -48,6 +53,7 @@ $(document).ready(function () {
       .addClass("active");
   });
 
+  // Handle bet history tab selection
   $(".casino_bets_history_head_item").click(function () {
     $(".casino_bets_history_head_item").removeClass("active");
     $(this).addClass("active");
@@ -56,6 +62,7 @@ $(document).ready(function () {
     $('.casino_bets_history_body[data-type="' + selectedType + '"]').show();
   });
 
+  // Handle chat close button
   $(".chat_head_close").click(function () {
     if ($(".chat_wrapper").hasClass("open")) {
       $(".chat_wrapper").removeClass("open").addClass("close");
@@ -68,6 +75,7 @@ $(document).ready(function () {
     }
   });
 
+  // Handle chat open button
   $(".open_chat").click(function () {
     if ($(".chat_wrapper").hasClass("open")) {
       $(".chat_wrapper").removeClass("open").addClass("close");
@@ -80,6 +88,7 @@ $(document).ready(function () {
     }
   });
 
+  // Handle game list scroll left
   $("#scrollLeft").on("click", function () {
     const $wrapper = $("#gamesWrapper");
     $wrapper.animate(
@@ -90,6 +99,7 @@ $(document).ready(function () {
     );
   });
 
+  // Handle game list scroll right
   $("#scrollRight").on("click", function () {
     const $wrapper = $("#gamesWrapper");
     $wrapper.animate(
@@ -100,6 +110,7 @@ $(document).ready(function () {
     );
   });
 
+  // Handle login modal open
   $(".openModalLogin").click(function () {
     $(".modal").fadeOut(350);
     $(".modal_background").fadeIn(350);
@@ -107,6 +118,7 @@ $(document).ready(function () {
     $("body").css("overflow", "hidden");
   });
 
+  // Handle wallet modal open
   $(".header_wallet_btn").click(function () {
     $(".modal").fadeOut(350);
     $(".modal_background").fadeIn(350);
@@ -114,6 +126,7 @@ $(document).ready(function () {
     $("body").css("overflow", "hidden");
   });
 
+  // Handle registration modal open
   $(".openModalReg").click(function () {
     $(".modal").fadeOut(350);
     $(".modal_background").fadeIn(350);
@@ -121,17 +134,20 @@ $(document).ready(function () {
     $("body").css("overflow", "hidden");
   });
 
+  // Handle modal close
   $(".modal_close").click(function () {
     $(".modal_background").fadeOut(350);
     $(".modal").fadeOut(350);
     $("body").css("overflow", "visible");
   });
 
+  // Handle wallet currency selection
   $(".modal_wallet_monet_item").click(function () {
     $(".modal_wallet_monet_item").removeClass("active");
     $(this).addClass("active");
   });
 
+  // Handle mobile menu toggle
   $(".openBrowse").click(function () {
     if ($(".sidebar").hasClass("active")) {
       $(".sidebar").removeClass("active");
@@ -144,6 +160,7 @@ $(document).ready(function () {
     }
   });
 
+  // Mobile-specific hover handlers
   if ($(window).width() < 790) {
     $(".header_profile").hover(
       function () {
@@ -182,6 +199,7 @@ $(document).ready(function () {
     );
   }
 
+  // Handle blackjack settings toggle
   $(".blackjack_settings").click(function () {
     if ($(".blackjack_game_footer_settings_wrapper").is(":visible")) {
       $(".blackjack_game_footer_settings_wrapper").fadeOut(350);
@@ -191,6 +209,7 @@ $(document).ready(function () {
     }
   });
 
+  // Handle profile menu toggle
   $(".header_profile").click(function () {
     if ($(".header_notify_wrapper").is(":visible")) {
       $(".header_notify_wrapper").fadeOut(350);
@@ -206,6 +225,7 @@ $(document).ready(function () {
     }
   });
 
+  // Handle notifications toggle
   $(".header_notify").click(function () {
     if ($(".header_notifications_wrapper").is(":visible")) {
       $(".header_notifications_wrapper").fadeOut(350);
@@ -217,11 +237,13 @@ $(document).ready(function () {
     }
   });
 
+  // Handle notifications close
   $(".header_notifications_header_close").click(function () {
     $(".header_notifications_wrapper").removeClass("active");
     $(".header_notifications_wrapper").fadeOut(350);
   });
 
+  // Handle blackjack live stats toggle
   $(".blackjack_livestats").click(function () {
     if ($(".blackjack_livestats_wrapper").is(":visible")) {
       $(".blackjack_livestats_wrapper").fadeOut(350);
@@ -232,6 +254,7 @@ $(document).ready(function () {
     }
   });
 
+  // Handle blackjack live stats close
   $(".blackjack_livestats_header_close").click(function () {
     $(".blackjack_livestats_wrapper").fadeOut(350);
     $(".blackjack_livestats_wrapper").addClass("active");
