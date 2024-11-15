@@ -8,8 +8,11 @@ $(document).ready(function () {
       $(".sidebar").css("width", "60px");
       $(".sidebar_item_name").css("opacity", "0");
     } else {
-      $(".sidebar").css("width", "200px"); 
+      $(".sidebar").css("width", "200px");
       $(".sidebar_item_name").css("opacity", "1");
+      $(".modal_background").fadeOut(350);
+      $(".modal").fadeOut(350);
+      $("body").css("overflow", "visible");
     }
 
     isSidebarOpen = !isSidebarOpen;
@@ -134,20 +137,13 @@ $(document).ready(function () {
     $("body").css("overflow", "hidden");
   });
 
-
-
-
-// Handle soglash modal open
-$(".openModalSogl").click(function () {
-  $(".modal").fadeOut(350);
-  $(".modal_background").fadeIn(350);
-  $(".modal_sogl").fadeIn(350);
-  $("body").css("overflow", "hidden");
-});
-
-
-
-
+  // Handle soglash modal open
+  $(".openModalSogl").click(function () {
+    $(".modal").fadeOut(350);
+    $(".modal_background").fadeIn(350);
+    $(".modal_sogl").fadeIn(350);
+    $("body").css("overflow", "hidden");
+  });
 
   // Handle modal close
   $(".modal_close").click(function () {
