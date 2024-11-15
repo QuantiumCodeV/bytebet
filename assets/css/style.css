@@ -1064,6 +1064,7 @@ input {
   align-items: center;
   gap: 20px;
   border-bottom: 1px solid #2c3d53;
+  overflow-x: scroll;
 }
 
 .casino_bets_history_head_item,
@@ -1076,6 +1077,7 @@ input {
   padding: 17px 8px;
   cursor: pointer;
   text-align: center;
+  white-space: nowrap;
 }
 
 .casino_bets_history_head_item.active,
