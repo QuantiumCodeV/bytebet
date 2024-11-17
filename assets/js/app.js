@@ -54,12 +54,15 @@ $(document).ready(function () {
     $('.setting_general[data-type="' + selectedType + '"]')
       .show()
       .addClass("active");
+
+    $("body").css("background", "#0a131f");
   });
 
   $(".settings_nav_back").click(function () {
     $(".settings_nav_menu").show();
     $(".profile_pages_head").show(); 
     $(".settings_content").hide();
+    $("body").css("background", "#0c1927");
   });
 
   // Handle bet history tab selection
