@@ -25,6 +25,16 @@
     <title>ByteBet</title>
   </head>
   <body>
+    <style>
+      @media screen and (max-width: 1000px) {
+        body {
+          background-color: #0c1927;
+        }
+        .footer_wrapper {
+          background-color: #0c1927;
+        }
+      }
+    </style>
     <div class="modal_background"></div>
     <div class="wrapper">
       <div class="header">
@@ -41,7 +51,7 @@
         <div class="header_nav">
           <a href="casino.html" class="header_nav_link">Originals</a>
           <a href="#" class="header_nav_link">Casino</a>
-          <a href="#" class="header_nav_link">Bets</a>
+          <a href="bets.html" class="header_nav_link">Bets</a>
           <a href="#" class="header_nav_link">Support</a>
         </div>
         <div class="header_other">
@@ -168,7 +178,7 @@
             </div>
           </div>
           <div class="header_notify_wrapper">
-            <a href="#" class="header_notify_item">
+            <a href="#" class="header_notify_item wallet_open">
               <div class="header_notify_item_icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -807,7 +817,7 @@
               </div>
               <div class="sidebar_item_name">Recent</div>
             </a>
-            <a href="#" class="sidebar_item">
+            <a href="bets.html" class="sidebar_item">
               <div class="sidebar_item_icon">
                 <svg
                   width="16"
@@ -843,7 +853,7 @@
               </div>
               <div class="sidebar_item_name">BB Originals</div>
             </a>
-            <a href="#" class="sidebar_item">
+            <a href="casino.html" class="sidebar_item">
               <div class="sidebar_item_icon">
                 <svg
                   width="18"
@@ -1076,6 +1086,17 @@
         <div class="main_content">
           <div class="pages_wrapper">
             <div class="profile_pages_head">
+              <div onclick="history.back()" class="profile_pages_head_back">
+                <svg
+                  width="7"
+                  height="10"
+                  viewBox="0 0 7 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M6 9L2 5L6 1" stroke="#6F85A0" stroke-width="2" />
+                </svg>
+              </div>
               <div class="profile_pages_head_icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1115,7 +1136,24 @@
               </div>
               <div class="settings_content">
                 <div class="setting_general active" data-type="general">
-                  <div class="setting_general_head">
+                  
+                 <div class="setting_general_head">
+                    
+                    <div class="settings_nav_back">
+                      <svg
+                        width="7"
+                        height="10"
+                        viewBox="0 0 7 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 9L2 5L6 1"
+                          stroke="#6F85A0"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                     <div class="setting_general_head_name">Email</div>
                     <div class="setting_general_head_status">Verified</div>
                   </div>
@@ -1130,7 +1168,8 @@
                     />
                   </div>
                   <div class="setting_general_line"></div>
-                  <div class="setting_general_head">
+                 <div class="setting_general_head">
+                    
                     <div class="setting_general_head_name">Phone Number</div>
                   </div>
                   <div class="setting_general_head_desc">
@@ -1263,7 +1302,9 @@
                   <a href="casino.html" class="footer_section_nav_item_link"
                     >Casino games</a
                   >
-                  <a href="#" class="footer_section_nav_item_link">Slots</a>
+                  <a href="casino.html" class="footer_section_nav_item_link"
+                    >Slots</a
+                  >
                   <a href="#" class="footer_section_nav_item_link"
                     >Live Casino</a
                   >

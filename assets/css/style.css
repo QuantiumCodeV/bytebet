@@ -2817,6 +2817,12 @@ input {
   height: 20px;
   background: #e21452;
 }
+.profile_pages_head_back{
+  display: none;
+}
+.settings_nav_back{
+  display: none;
+}
 
 @media screen and (max-width: 768px) {
   .sidebar {
@@ -2829,6 +2835,11 @@ input {
 }
 
 @media screen and (max-width: 1000px) {
+  .profile_pages_head_back{
+    display: flex;
+    margin-right: 10px;
+    cursor: pointer;
+  }
   .header_menu,
   .header_nav,
   .header_chat,
@@ -2948,6 +2959,10 @@ input {
     border-bottom: 1px solid #1e2b3c;
   }
 
+.start_img_container{
+  width: 100%;
+}
+
   .player_head_title {
     font-size: 24px;
   }
@@ -3010,12 +3025,16 @@ input {
     margin-top: 50px;
     gap: 40px;
   }
-
+  .settings_nav_back{
+    display: flex;
+    margin-right: 10px;
+    cursor: pointer;
+  }
   .casino_news,
   .casino_category,
   .casino_bet_table,
   .blackjack_history {
-    overflow-x: hidden;
+    overflow-x: scroll;
   }
 
   .casino_news_item {

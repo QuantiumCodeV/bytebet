@@ -56,6 +56,12 @@ $(document).ready(function () {
       .addClass("active");
   });
 
+  $(".settings_nav_back").click(function () {
+    $(".settings_nav_menu").show();
+    $(".profile_pages_head").show(); 
+    $(".settings_content").hide();
+  });
+
   // Handle bet history tab selection
   $(".casino_bets_history_head_item").click(function () {
     $(".casino_bets_history_head_item").removeClass("active");
@@ -82,7 +88,6 @@ $(document).ready(function () {
 
   // Handle chat open button
   $(".open_chat").click(function () {
-
     if ($(".chat_wrapper").hasClass("open")) {
       $(".open_chat").removeClass("active");
       $(".chat_wrapper").removeClass("open").addClass("close");
@@ -93,6 +98,10 @@ $(document).ready(function () {
       if ($(window).width() < 1001) {
         $("body").css("overflow", "hidden");
       }
+      $(".header_notifications_wrapper").removeClass("active");
+      $(".header_notifications_wrapper").fadeOut(350);
+      $(".header_notify_wrapper").fadeOut(350);
+      $(".header_notify_wrapper").removeClass("active");
     }
   });
 
@@ -127,7 +136,7 @@ $(document).ready(function () {
   });
 
   // Handle wallet modal open
-  $(".header_wallet_btn").click(function () {
+  $(".header_wallet_btn, .wallet_open").click(function () {
     $(".modal").fadeOut(350);
     $(".modal_background").fadeIn(350);
     $(".modal_wallet").fadeIn(350);
@@ -173,6 +182,9 @@ $(document).ready(function () {
       $(".sidebar").addClass("active");
       $(".openBrowse").addClass("active");
       $("body").css("overflow", "hidden");
+      $(".modal_background").fadeOut(350);
+      $(".modal").fadeOut(350);
+      $("body").css("overflow", "visible");
     }
   });
 
